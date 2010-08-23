@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="org.joecool.jplayer"
+        package="cc.co.androidzoo.jplayer"
         android:sharedUserId="android.media">
 
 </manifest>
