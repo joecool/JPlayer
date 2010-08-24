@@ -8,7 +8,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class playerUI extends Activity {
+public class mainUI extends Activity {
 
     /** Called when the activity is first created. */
     @Override
