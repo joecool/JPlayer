@@ -17,10 +17,10 @@ public class mainUI extends Activity {
         
 
         setContentView(R.layout.main);
-        /*        
+        
         MovieSurface mFSurface = (MovieSurface) findViewById(R.id.flicker);
         TextView mTextView = (TextView) findViewById(R.id.text);
-        mFSurface.setTextView(mTextView); */
+        mFSurface.setTextView(mTextView); 
     }
     
     
