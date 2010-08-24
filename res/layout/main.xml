@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     
-    <com.joe.MovieSurface
+    <cc.co.androidzoo.jplayer.MovieSurface
       android:id="@+id/flicker"
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"/>

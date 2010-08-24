@@ -110,7 +110,7 @@ public class MovieSurface extends SurfaceView {
             class UpdateThread implements Runnable{  
 
             
-                //            @Override  
+            @Override  
                 public void run() {  
                 
                 Canvas canvas = mSurfaceHolder.lockCanvas(null);
