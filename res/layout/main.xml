@@ -13,7 +13,7 @@
         android:layout_height="fill_parent" >
         <TextView
           android:id="@+id/text"
-          android:text="@strings/wait_prompt"
+          android:text="@string/wait_prompt"
           android:visibility="visible"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
