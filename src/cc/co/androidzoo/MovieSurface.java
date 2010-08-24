@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 public class MovieSurface extends SurfaceView {
     static {
-        System.loadLibrary("Core");
+        System.loadLibrary("libCore");
     }
 
     private int mNativeContext; // accessed by native methods
