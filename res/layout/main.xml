@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <com.joe.MovieSurface
+      android:id="@+id/flicker"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"/>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <TextView
+          android:id="@+id/text"
+  android:text="Please wait..."
+  android:visibility="visible"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:textColor="#ff00ff00"
+          android:textSize="18sp"/>
+     </RelativeLayout>
+         
+</FrameLayout>
