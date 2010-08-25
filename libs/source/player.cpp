@@ -14,6 +14,7 @@ using android::MemoryHeapBase;
 using android::NO_ERROR;
 using android::NO_MEMORY;
 using android::PIXEL_FORMAT_RGB_565;
+using namespace android;
 
 Player::Player()
 {
@@ -57,7 +58,7 @@ status_t Player::start()
     memset(pFrameBuf, 0, 852 * 480 * 2);
     mISurface->postBuffer(0);
 }
-/*
+
 status_t Player::setVideoSurface(const sp<Surface>& surface)
 {
     LOGV("setVideoSurface");
@@ -66,7 +67,8 @@ status_t Player::setVideoSurface(const sp<Surface>& surface)
 		mISurface = surface->getISurface();
 	}
 	return NO_ERROR;
-}*/
+}
+
 status_t Player::setVideoSurface(const sp<ISurface>& surface)
 {
     LOGV("setVideoSurface(%p)", surface.get());
