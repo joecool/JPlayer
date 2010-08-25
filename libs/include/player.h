@@ -3,6 +3,7 @@
 
 #include <binder/IMemory.h>
 #include <ui/Surface.h>
+#include "utils/Errors.h"  // for status_t
 
 namespace androidzoo {
 using android::Surface;
@@ -12,13 +13,12 @@ class Player
 {
 
 public:
-    MediaPlayer();
-    ~MediaPlayer();
+    Player();
+    ~Player();
             void            onFirstRef();
             status_t        setDataSource(const char *url);
             status_t        setDataSource(int fd, int64_t offset, int64_t length);
             status_t        setVideoSurface(const sp<Surface>& surface);
-            status_t        setListener(const sp<MediaPlayerListener>& listener);
             status_t        prepare();
             status_t        prepareAsync();
             status_t        start();

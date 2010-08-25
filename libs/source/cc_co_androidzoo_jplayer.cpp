@@ -28,8 +28,6 @@ struct fields_t {
 };
 static fields_t fields;
 
-static Mutex sLock;
-
 static Surface* get_surface(JNIEnv* env, jobject clazz)
 {
     return (Surface*)env->GetIntField(clazz, fields.surface_native);
@@ -37,14 +35,12 @@ static Surface* get_surface(JNIEnv* env, jobject clazz)
 
 static sp<Player> getPlayer(JNIEnv* env, jobject thiz)
 {
-    Mutex::Autolock l(sLock);
     Player* const p = (MediaPlayer*)env->GetIntField(thiz, fields.context);
     return sp<Player>(p);
 }
 
 static sp<Player> setPlayer(JNIEnv* env, jobject thiz, const sp<Player>& player)
 {
-    Mutex::Autolock l(sLock);
     sp<Player> old = (MediaPlayer*)env->GetIntField(thiz, fields.context);
     if (player.get()) {
         player->incStrong(thiz);
