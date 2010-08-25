@@ -16,6 +16,7 @@ using android::sp;
 using android::status_t;
 using android::IInterface;
 using android::MediaPlayerInterface;
+using android::player_type;
 
 class Player:public MediaPlayerInterface
 {
