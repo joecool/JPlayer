@@ -18,7 +18,8 @@
 namespace androidzoo{
 using android::Surface;
 using android::sp;
-using android::jniThrowException;
+//using android::jniThrowException;
+using android:AndroidRuntime;
 
 struct fields_t {
     jfieldID    context;

@@ -40,7 +40,6 @@ public:
             status_t        setVolume(float leftVolume, float rightVolume);
             void            notify(int msg, int ext1, int ext2);
     static  int             snoop(short *data, int len, int kind);
-            status_t        getMetadata(bool update_only, bool apply_filter, Parcel *metadata);
 
             status_t        handleKeyEvent(int keyCode, int action);
 	    status_t        handleTouchEvent(int x, int y, int action);
