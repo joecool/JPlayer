@@ -17,6 +17,8 @@ using android::status_t;
 using android::IInterface;
 using android::MediaPlayerInterface;
 using android::player_type;
+using android::TEST_PLAYER;
+using android::Parcel;
 
 class Player:public MediaPlayerInterface
 {
