@@ -7,6 +7,7 @@
 #include <binder/IInterface.h>
 #include <utils/RefBase.h>
 #include <binder/Parcel.h>
+#include <media/MediaPlayerInterface.h>
 
 namespace androidzoo {
 using android::Surface;
@@ -14,11 +15,9 @@ using android::ISurface;
 using android::sp;
 using android::status_t;
 using android::IInterface;
-using android::BnInterface;
-using android::RefBase;
-using android::Parcel;
+using android::MediaPlayerInterface;
 
-class Player:public BnInterface<IInterface>
+class Player:public MediaPlayerInterface
 {
 
 public:
@@ -83,11 +82,6 @@ public:
     int                         mVideoHeight;
     sp<ISurface>                mISurface;
 
-	public:
-    virtual status_t    onTransact( uint32_t code,
-                                    const Parcel& data,
-                                    Parcel* reply,
-                                    uint32_t flags = 0);
 };
 }
 #endif
