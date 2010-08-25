@@ -8,6 +8,7 @@
 namespace androidzoo {
 using android::Surface;
 using android::sp;
+using android::status_t;
 
 class Player
 {
