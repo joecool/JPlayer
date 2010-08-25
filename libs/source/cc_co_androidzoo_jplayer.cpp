@@ -10,6 +10,8 @@
 //#include <android/log.h>
 #include "utils/Log.h"
 
+using namespace android::Mutex;
+
 struct fields_t {
     jfieldID    context;
     jfieldID    surface;
