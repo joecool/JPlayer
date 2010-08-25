@@ -5,6 +5,8 @@
 #include <ui/Surface.h>
 #include "utils/Errors.h"  // for status_t
 #include <binder/IInterface.h>
+#include <utils/RefBase.h>
+#include <binder/Parcel.h>
 
 namespace androidzoo {
 using android::Surface;
@@ -13,6 +15,8 @@ using android::sp;
 using android::status_t;
 using android::IInterface;
 using android::BnInterface;
+using android::RefBase;
+using android::Parcel;
 
 class Player:public BnInterface<IInterface>
 {
@@ -78,6 +82,13 @@ public:
     int                         mVideoWidth;
     int                         mVideoHeight;
     sp<ISurface>                mISurface;
+
+	public:
+    virtual status_t    onTransact( uint32_t code,
+                                    const Parcel& data,
+                                    Parcel* reply,
+                                    uint32_t flags = 0);
+};
 };
 }
 #endif

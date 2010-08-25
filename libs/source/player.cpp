@@ -47,7 +47,7 @@ status_t Player::start()
     mISurface->registerBuffers(buffer); 
 #define USE_SURFACE_BUFFER
 #ifdef USE_SURFACE_BUFFER
-    pFrameBuf = (unsigned char*)mFrameHeap->base();
+    unsigned char *pFrameBuf = (unsigned char*)mFrameHeap->base();
 #else
     pSurfaceFrameBuf = (unsigned char*)mFrameHeap->base();
     pFrameBuf = (unsigned char *)malloc(852 * 480 * 2);
@@ -61,7 +61,7 @@ status_t Player::start()
 status_t Player::setVideoSurface(const sp<Surface>& surface)
 {
     LOGV("setVideoSurface");
-	if(surface)
+	if(NULL != surface)
     {
 		mISurface = surface->getISurface();
 	}
