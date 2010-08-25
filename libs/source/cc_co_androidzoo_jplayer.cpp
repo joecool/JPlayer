@@ -8,7 +8,10 @@
 //#include "netinet/In.h"
 #include <assert.h>
 //#include <android/log.h>
+#include <utils/threads.h>
 #include "utils/Log.h"
+#include "android_runtime/AndroidRuntime.h"
+#include "utils/Errors.h"  // for status_t
 
 using namespace android::Mutex;
 
