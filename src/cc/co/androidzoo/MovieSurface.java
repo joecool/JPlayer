@@ -21,14 +21,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MovieSurface extends SurfaceView {
-    static {
-        System.loadLibrary("Core");
-    }
-
-    private int mNativeContext; // accessed by native methods
-    private int mListenerContext; // accessed by native methods
-    private Surface mSurface; // accessed by native methods
-
     private TextView mTextView = null;
     protected SurfaceHolder mSurfaceHolder;
 
