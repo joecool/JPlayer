@@ -89,7 +89,6 @@ public:
                                     Parcel* reply,
                                     uint32_t flags = 0);
 };
-};
 }
 #endif
 
