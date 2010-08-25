@@ -18,14 +18,12 @@ Player::Player()
     mStreamType = AudioSystem::MUSIC;
     mCurrentPosition = -1;
     mSeekPosition = -1;
-    mCurrentState = MEDIA_PLAYER_IDLE;
     mPrepareSync = false;
     mPrepareStatus = NO_ERROR;
     mLoop = false;
     mLeftVolume = mRightVolume = 1.0;
     mVideoWidth = mVideoHeight = 0;
-    mLockThreadId = 0;
-	mSurface = NULL;
+	mISurface = NULL;
 }
 
 Player::~Player()
