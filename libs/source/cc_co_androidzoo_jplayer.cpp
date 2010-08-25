@@ -12,6 +12,7 @@
 #include "utils/Log.h"
 #include "android_runtime/AndroidRuntime.h"
 #include "utils/Errors.h"  // for status_t
+#include "player.h"
 
 using android::Surface;
 using android::sp;

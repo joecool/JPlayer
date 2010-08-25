@@ -47,8 +47,9 @@ status_t Player::start()
        return ERROR_ALLOCATE_FAILED;
     }
     ISurface::BufferHeap buffer(852, 480, 852, 480, PIXEL_FORMAT_RGB_565, mFrameHeap);
-    mISurface->registerBuffers(buffer);          
-#ifdef 1
+    mISurface->registerBuffers(buffer); 
+#define USE_SURFACE_BUFFER
+#ifdef USE_SURFACE_BUFFER
     pFrameBuf = (unsigned char*)mFrameHeap->base();
 #else
     pSurfaceFrameBuf = (unsigned char*)mFrameHeap->base();
