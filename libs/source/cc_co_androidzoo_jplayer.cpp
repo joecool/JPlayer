@@ -13,8 +13,8 @@
 #include "android_runtime/AndroidRuntime.h"
 #include "utils/Errors.h"  // for status_t
 
-using namespace android::Surface;
-using namespace android::sp;
+using android::Surface;
+using android::sp;
 
 struct fields_t {
     jfieldID    context;
