@@ -5,14 +5,14 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <fcntl.h>
-
+#include <binder/MemoryHeapBase.h>
 #include "player.h"
 
 namespace androidzoo{
 
 using android::MemoryHeapBase;
 using android::NO_ERROR;
-using android::ERROR_ALLOCATE_FAILED;
+using android::NO_MEMORY;
 using android::PIXEL_FORMAT_RGB_565;
 
 Player::Player()
@@ -41,7 +41,7 @@ status_t Player::start()
     if (mFrameHeap->heapID() < 0) {
        LOGE("Error creating frame buffer heap");
        delete mFrameHeap;
-       return ERROR_ALLOCATE_FAILED;
+       return NO_MEMORY;
     }
     ISurface::BufferHeap buffer(852, 480, 852, 480, PIXEL_FORMAT_RGB_565, mFrameHeap);
     mISurface->registerBuffers(buffer); 
