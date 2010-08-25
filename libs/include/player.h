@@ -4,14 +4,17 @@
 #include <binder/IMemory.h>
 #include <ui/Surface.h>
 #include "utils/Errors.h"  // for status_t
+#include <binder/IInterface.h>
 
 namespace androidzoo {
 using android::Surface;
 using android::ISurface;
 using android::sp;
 using android::status_t;
+using android::IInterface;
+using android::BnInterface;
 
-class Player
+class Player:public BnInterface<IInterface>
 {
 
 public:

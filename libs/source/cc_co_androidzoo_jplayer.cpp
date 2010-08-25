@@ -45,12 +45,12 @@ static sp<Player> getPlayer(JNIEnv* env, jobject thiz)
 static sp<Player> setPlayer(JNIEnv* env, jobject thiz, const sp<Player>& player)
 {
     sp<Player> old = (Player*)env->GetIntField(thiz, fields.context);
-/*    if (player.get()) {
+    if (player.get()) {
         player->incStrong(thiz);
     }
     if (old != 0) {
         old->decStrong(thiz);
-    }*/
+    }
     env->SetIntField(thiz, fields.context, (int)player.get());
     return old;
 }
