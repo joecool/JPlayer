@@ -50,11 +50,8 @@ public:
             status_t        handleKeyEvent(int keyCode, int action);
 	    status_t        handleTouchEvent(int x, int y, int action);
 	    status_t        setInputText(char *pInputStr, int inputLen);
-	    status_t        handleData(char* data, int len, int streamID);                                                 
-	    status_t        handleEndData(int streamID);                                                                   
-	    status_t        handleStatus(int major_version, int minor_version, int code,char* reason_phrase, int streamID);
-	    status_t        handleError(int id,char* description, int streamID);                                           
-	    status_t        handleHeaders(long contentLength, int streamID);
+    virtual status_t    invoke(const Parcel& request, Parcel *reply) {return 0;}
+    virtual player_type playerType() { return 0; }
 
         
             void            doFSCommand(char *command, char *args); 

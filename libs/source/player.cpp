@@ -68,5 +68,17 @@ status_t Player::setVideoSurface(const sp<Surface>& surface)
 	return NO_ERROR;
 }
 
+status_t FlashPlayer::setVideoSurface(const sp<ISurface>& surface)
+{
+    LOGV("setVideoSurface(%p)", surface.get());
+    mISurface = surface;
+    return NO_ERROR;
+}
+
+status_t Player::initCheck()
+{
+    return NO_ERROR;
+}
+
 
 }
