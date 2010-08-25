@@ -10,16 +10,19 @@
 
 namespace androidzoo{
 
+using android::MemoryHeapBase;
+using android::NO_ERROR;
+using android::ERROR_ALLOCATE_FAILED;
+using android::PIXEL_FORMAT_RGB_565;
+
 Player::Player()
 {
     LOGV("constructor");
     mCookie = NULL;
     mDuration = -1;
-    mStreamType = AudioSystem::MUSIC;
     mCurrentPosition = -1;
     mSeekPosition = -1;
     mPrepareSync = false;
-    mPrepareStatus = NO_ERROR;
     mLoop = false;
     mLeftVolume = mRightVolume = 1.0;
     mVideoWidth = mVideoHeight = 0;
@@ -58,10 +61,11 @@ status_t Player::start()
 status_t Player::setVideoSurface(const sp<Surface>& surface)
 {
     LOGV("setVideoSurface");
-	if(null != surface)
+	if(surface)
     {
 		mISurface = surface->getISurface();
 	}
+	return NO_ERROR;
 }
 
 
