@@ -50,7 +50,6 @@ public:
 	    status_t        handleHeaders(long contentLength, int streamID);
 
         
-            status_t        setFlashPlayerListener(const sp<FlashPlayerListener>& listener);
             void            doFSCommand(char *command, char *args); 
             void            getInputText(char* initialText, int initLen, int maxNumChars, int textFlags);
             int64_t         convertLocalToUTCTime(int64_t localtime);
@@ -61,14 +60,6 @@ public:
 	    int             getMaxVolumeLevel();
 	    short unsigned int GetScreenOrientation();
 	    char*           getDateTimeFormat();
-	    int geturlnotify(const char* URL, const char* window, int notifyData);
-            int posturlnotify(const char* URL, const char* window, unsigned int len, const char* buf, int notifyData);
-private:
-            void            clear_l();
-            status_t        seekTo_l(int msec);
-            status_t        prepareAsync_l();
-            status_t        getDuration_l(int *msec);
-            status_t        setDataSource(const sp<IMediaPlayer>& player);
 
     thread_id_t                 mLockThreadId;
     Mutex                       mLock;

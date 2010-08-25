@@ -6,13 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#include <binder/IServiceManager.h>
-#include <binder/IPCThreadState.h>
-
-#include <media/mediaplayer.h>
-#include <media/AudioTrack.h>
-
-#include <binder/MemoryBase.h>
+#include "player.h"
 
 Player::Player()
 {
