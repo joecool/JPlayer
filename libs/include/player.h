@@ -24,10 +24,12 @@ class Player:public MediaPlayerInterface
 public:
     Player();
     ~Player();
+    virtual status_t    initCheck();
             void            onFirstRef();
             status_t        setDataSource(const char *url);
             status_t        setDataSource(int fd, int64_t offset, int64_t length);
             status_t        setVideoSurface(const sp<Surface>& surface);
+    virtual status_t    setVideoSurface(const sp<ISurface>& surface);
             status_t        prepare();
             status_t        prepareAsync();
             status_t        start();
@@ -52,7 +54,7 @@ public:
 	    status_t        handleTouchEvent(int x, int y, int action);
 	    status_t        setInputText(char *pInputStr, int inputLen);
     virtual status_t    invoke(const Parcel& request, Parcel *reply) {return 0;}
-    virtual player_type playerType() { return 0; }
+    virtual player_type playerType() { return TEST_PLAYER; }
 
         
             void            doFSCommand(char *command, char *args); 
