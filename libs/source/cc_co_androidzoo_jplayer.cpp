@@ -17,6 +17,7 @@
 namespace androidzoo{
 using android::Surface;
 using android::sp;
+using android::jniThrowException;
 
 struct fields_t {
     jfieldID    context;
@@ -35,13 +36,13 @@ static Surface* get_surface(JNIEnv* env, jobject clazz)
 
 static sp<Player> getPlayer(JNIEnv* env, jobject thiz)
 {
-    Player* const p = (MediaPlayer*)env->GetIntField(thiz, fields.context);
+    Player* const p = (Player*)env->GetIntField(thiz, fields.context);
     return sp<Player>(p);
 }
 
 static sp<Player> setPlayer(JNIEnv* env, jobject thiz, const sp<Player>& player)
 {
-    sp<Player> old = (MediaPlayer*)env->GetIntField(thiz, fields.context);
+    sp<Player> old = (Player*)env->GetIntField(thiz, fields.context);
     if (player.get()) {
         player->incStrong(thiz);
     }
@@ -454,11 +455,11 @@ static void
 cc_co_androidzoo_jplayer_release(JNIEnv *env, jobject thiz)
 {
     LOGV("release");
-    sp<Player> mp = setMediaPlayer(env, thiz, 0);
+    sp<Player> mp = setPlayer(env, thiz, 0);
     if (mp != NULL) {
         // this prevents native callbacks after the object is released
-        mp->setListener(0);
-        mp->disconnect();
+//        mp->setListener(0);
+ //       mp->disconnect();
     }
 }
 
