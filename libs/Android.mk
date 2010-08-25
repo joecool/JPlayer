@@ -21,7 +21,7 @@ LOCAL_SRC_FILES := source/cc_co_androidzoo_jplayer.cpp \
                    source/player.cpp
 
 LOCAL_C_INCLUDES += \
-    include \
+    $(LOCAL_PATH)/include \
     external/tremor/Tremor \
     frameworks/base/core/jni \
     $(PV_INCLUDES) \
