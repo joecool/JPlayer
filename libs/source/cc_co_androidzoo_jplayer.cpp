@@ -9,7 +9,7 @@
 //#include "netinet/In.h"
 #include <assert.h>
 //#include <android/log.h>
-#include <utils/threads.h>
+//#include <utils/threads.h>
 #include "utils/Log.h"
 #include "android_runtime/AndroidRuntime.h"
 #include "utils/Errors.h"  // for status_t
@@ -19,7 +19,7 @@ namespace androidzoo{
 using android::Surface;
 using android::sp;
 //using android::jniThrowException;
-using android:AndroidRuntime;
+using android::AndroidRuntime;
 
 struct fields_t {
     jfieldID    context;
@@ -92,7 +92,7 @@ cc_co_androidzoo_jplayer_setDataSource(JNIEnv *env, jobject thiz, jstring path)
 
 static void
 cc_co_androidzoo_jplayer_setDataSourceFD(JNIEnv *env, jobject thiz, jobject fileDescriptor, jlong offset, jlong length)
-{
+{/*
     sp<Player> mp = getPlayer(env, thiz);
     if (mp == NULL ) {
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
@@ -106,6 +106,7 @@ cc_co_androidzoo_jplayer_setDataSourceFD(JNIEnv *env, jobject thiz, jobject file
     int fd = getParcelFileDescriptorFD(env, fileDescriptor);
     LOGV("setDataSourceFD: fd %d", fd);
     process_media_player_call( env, thiz, mp->setDataSource(fd, offset, length), "java/io/IOException", "setDataSourceFD failed." );
+    */
 }
 
 static void setVideoSurface(const sp<Player>& mp, JNIEnv *env, jobject thiz)
