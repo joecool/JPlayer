@@ -3,11 +3,22 @@
 
 #include <binder/IMemory.h>
 #include <ui/Surface.h>
+#include <ui/ISurface.h>
 #include "utils/Errors.h"  // for status_t
 #include <binder/IInterface.h>
 #include <utils/RefBase.h>
 #include <binder/Parcel.h>
 #include <media/MediaPlayerInterface.h>
+
+namespace android {
+class Test {
+public:
+    static const sp<ISurface>& getISurface(const sp<Surface>& s) {
+        return s->getISurface();
+    }
+};
+};
+
 
 namespace androidzoo {
 using android::Surface;
@@ -19,6 +30,8 @@ using android::MediaPlayerInterface;
 using android::player_type;
 using android::TEST_PLAYER;
 using android::Parcel;
+using android::MediaPlayer;
+using android::Test;
 
 class Player:public MediaPlayerInterface
 {
