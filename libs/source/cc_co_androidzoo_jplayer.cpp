@@ -116,7 +116,7 @@ static void setVideoSurface(const sp<Player>& mp, JNIEnv *env, jobject thiz)
         const sp<Surface> native_surface = get_surface(env, surface);
         LOGV("prepare: surface=%p (id=%d)",
              native_surface.get(), native_surface->ID());
-        mp->setVideoSurface(native_surface);
+        mp->setVideoSurface(native_surface->getISurface());
     }
 }
 
