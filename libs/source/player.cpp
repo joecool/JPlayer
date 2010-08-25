@@ -8,6 +8,8 @@
 
 #include "player.h"
 
+namespace androidzoo{
+
 Player::Player()
 {
     LOGV("constructor");
@@ -65,4 +67,4 @@ status_t Player::setVideoSurface(const sp<Surface>& surface)
 }
 
 
-
+}

@@ -14,6 +14,7 @@
 #include "utils/Errors.h"  // for status_t
 #include "player.h"
 
+namespace androidzoo{
 using android::Surface;
 using android::sp;
 
@@ -540,4 +541,5 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved)
 
     return result;
 
+}
 }

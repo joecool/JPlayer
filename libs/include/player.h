@@ -4,6 +4,10 @@
 #include <binder/IMemory.h>
 #include <ui/Surface.h>
 
+namespace androidzoo {
+using android::Surface;
+using android::sp;
+
 class Player
 {
 
@@ -81,6 +85,6 @@ public:
     sp<ISurface>                mISurface;
     static  Mutex                           sServiceLock;
 };
-
+}
 #endif
 
