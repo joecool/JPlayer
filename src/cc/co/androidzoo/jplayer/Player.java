@@ -56,6 +56,11 @@ public class Player
         _start();
     }
 
+    private static void postEventFromNative(Object mediaplayer_ref,
+                                            int what, int arg1, int arg2, Object obj)
+    {
+    }
+
 
     /*
      * Update the MediaPlayer ISurface. Call after updating mSurface.
