@@ -54,7 +54,7 @@ status_t Player::start()
 #endif    
 
     /*test*/
-    memset(pFrameBuf, 0, 852 * 480 * 2);
+    memset(pFrameBuf, 0xAA, 852 * 480 * 2);
     mISurface->postBuffer(0);
 
     return NO_ERROR;
