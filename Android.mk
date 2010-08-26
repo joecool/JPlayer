@@ -7,7 +7,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_PACKAGE_NAME := JPlayer
 
-LOCAL_JNI_SHARED_LIBRARIES := libCore
+LOCAL_JNI_SHARED_LIBRARIES := libjplayer_jni
 
 include $(BUILD_PACKAGE)
 

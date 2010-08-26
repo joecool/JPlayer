@@ -24,7 +24,7 @@ import java.lang.ref.WeakReference;
 public class Player
 {
     static {
-        System.loadLibrary("Core");
+        System.loadLibrary("jplayer_jni");
         native_init();
     }
 
