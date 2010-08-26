@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := libCore
-LOCAL_SRC_FILES := source/cc_co_androidzoo_jplayer.cpp \
+LOCAL_SRC_FILES := source/cc_co_androidzoo_jplayer_Player.cpp \
                    source/player.cpp
 
 LOCAL_C_INCLUDES += \
