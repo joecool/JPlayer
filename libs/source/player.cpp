@@ -114,7 +114,7 @@ status_t Player::pause()
 
 bool Player::isPlaying()
 {
-	return FALSE;
+	return false;
 }
 
 status_t Player::seekTo(int p)
