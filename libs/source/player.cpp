@@ -142,4 +142,14 @@ status_t Player::setLooping(int)
 	return NO_ERROR;
 }
 
+status_t Player::getCurrentPosition(int *msec)
+{
+	return NO_ERROR;
+}
+
+status_t Player::getDuration(int *msec)
+{
+	return NO_ERROR;
+}
+
 }
