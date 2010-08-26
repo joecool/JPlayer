@@ -78,6 +78,13 @@ public class MovieSurface extends SurfaceView {
             mHandler.removeMessages(SHOW_FPS);
         }
     }
+
+    private void openVideo(){
+        Player p = new Player();
+        p.setDisplay(mSurfaceHolder);
+        p.start();
+
+    }
     
     SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback()
         {
@@ -90,7 +97,7 @@ public class MovieSurface extends SurfaceView {
             public void surfaceCreated(SurfaceHolder holder)
             {
                 mSurfaceHolder = holder;
-                new Thread(new UpdateThread()).start();  
+                openVideo();
             }
 
             public void surfaceDestroyed(SurfaceHolder holder)

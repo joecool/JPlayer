@@ -25,7 +25,7 @@ public class Player
 {
     static {
         System.loadLibrary("Core");
-        native_init()
+        native_init();
     }
 
     private int mNativeContext; // accessed by native methods
@@ -52,6 +52,10 @@ public class Player
         _setVideoSurface();
     }
 
+    public  void start() throws IllegalStateException {
+        _start();
+    }
+
 
     /*
      * Update the MediaPlayer ISurface. Call after updating mSurface.
@@ -59,6 +63,6 @@ public class Player
     private static native final void native_init();
     private native final void native_setup(Object mediaplayer_this);
     private native void _setVideoSurface();
-
+    private native void _start();
 
 }
