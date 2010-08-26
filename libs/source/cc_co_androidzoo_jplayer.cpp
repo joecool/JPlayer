@@ -22,6 +22,7 @@ using androidzoo::Player;
 using android::status_t;
 */
 using namespace android;
+using namespace androidzoo;
 
 struct fields_t {
     jfieldID    context;
