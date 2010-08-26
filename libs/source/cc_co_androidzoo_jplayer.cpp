@@ -14,12 +14,14 @@
 #include "android_runtime/AndroidRuntime.h"
 #include "utils/Errors.h"  // for status_t
 #include "player.h"
-
+/*
 using android::Surface;
 using android::sp;
 using android::AndroidRuntime;
 using androidzoo::Player;
 using android::status_t;
+*/
+using namespace android;
 
 struct fields_t {
     jfieldID    context;
