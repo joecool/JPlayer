@@ -206,7 +206,7 @@ cc_co_androidzoo_jplayer_flush(JNIEnv *env, jobject thiz)
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
         return;
     }
-    process_media_player_call( env, thiz, mp->flush(), NULL, NULL );
+//    process_media_player_call( env, thiz, mp->flush(), NULL, NULL );
 }
 
 static jboolean
@@ -244,10 +244,11 @@ cc_co_androidzoo_jplayer_getVideoWidth(JNIEnv *env, jobject thiz)
         return 0;
     }
     int w;
+	/*
     if (0 != mp->getVideoWidth(&w)) {
         LOGE("getVideoWidth failed");
         w = 0;
-    }
+    }*/
     LOGV("getVideoWidth: %d", w);
     return w;
 }
@@ -260,11 +261,11 @@ cc_co_androidzoo_jplayer_getVideoHeight(JNIEnv *env, jobject thiz)
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
         return 0;
     }
-    int h;
+    int h;/*
     if (0 != mp->getVideoHeight(&h)) {
         LOGE("getVideoHeight failed");
         h = 0;
-    }
+    }*/
     LOGV("getVideoHeight: %d", h);
     return h;
 }
@@ -319,7 +320,7 @@ cc_co_androidzoo_jplayer_setAudioStreamType(JNIEnv *env, jobject thiz, int strea
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
         return;
     }
-    process_media_player_call( env, thiz, mp->setAudioStreamType(streamtype) , NULL, NULL );
+//    process_media_player_call( env, thiz, mp->setAudioStreamType(streamtype) , NULL, NULL );
 }
 
 static void
@@ -343,7 +344,8 @@ cc_co_androidzoo_jplayer_isLooping(JNIEnv *env, jobject thiz)
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
         return false;
     }
-    return mp->isLooping();
+	return FALSE;
+    //return mp->isLooping();
 }
 
 static void
@@ -355,7 +357,7 @@ cc_co_androidzoo_jplayer_setVolume(JNIEnv *env, jobject thiz, float leftVolume, 
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
         return;
     }
-    process_media_player_call( env, thiz, mp->setVolume(leftVolume, rightVolume), NULL, NULL );
+//    process_media_player_call( env, thiz, mp->setVolume(leftVolume, rightVolume), NULL, NULL );
 }
 
 // FIXME: deprecated
