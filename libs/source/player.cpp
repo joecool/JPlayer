@@ -82,12 +82,12 @@ status_t Player::initCheck()
     return NO_ERROR;
 }
 
-status_t Player::setDataSource(const char*)
+status_t Player::setDataSource(const char* src)
 {
 	return NO_ERROR;
 }
 
-status_t Player::setDataSource(int, int64_t, int64_t)
+status_t Player::setDataSource(int i, int64_t j, int64_t k)
 {
 	return NO_ERROR;
 }
@@ -117,17 +117,7 @@ bool Player::isPlaying()
 	return FALSE;
 }
 
-status_t Player::seekTo(int)
-{
-	return NO_ERROR;
-}
-
-status_t Player::getCurrentPosition(int*)
-{
-	return NO_ERROR;
-}
-
-status_t Player::getDuration(int*)
+status_t Player::seekTo(int p)
 {
 	return NO_ERROR;
 }
@@ -137,7 +127,7 @@ status_t Player::reset()
 	return NO_ERROR;
 }
 
-status_t Player::setLooping(int)
+status_t Player::setLooping(int looping)
 {
 	return NO_ERROR;
 }
