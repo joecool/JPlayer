@@ -63,6 +63,7 @@ public class Player
     private native void _setVideoSurface();
     public native void setDataSource(String path) throws IOException, IllegalArgumentException, IllegalStateException;
     public native void setDataSource(FileDescriptor fd, long offset, long length)
+        throws IOException, IllegalArgumentException, IllegalStateException;
     public native void prepare() throws IOException, IllegalStateException;
     public native void prepareAsync() throws IllegalStateException;
     private native void _start() throws IllegalStateException;
