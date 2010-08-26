@@ -55,8 +55,8 @@ public:
     //        status_t        getVideoWidth(int *w);
     //        status_t        getVideoHeight(int *h);
     virtual status_t        seekTo(int msec);
-    vitrual status_t        getCurrentPosition(int *msec);
-    vitrual status_t        getDuration(int *msec);
+    virtual status_t        getCurrentPosition(int *msec);
+    virtual status_t        getDuration(int *msec);
     virtual status_t        reset();
     //        status_t        setAudioStreamType(int type);
     virtual status_t        setLooping(int loop);

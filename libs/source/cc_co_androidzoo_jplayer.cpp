@@ -344,7 +344,7 @@ cc_co_androidzoo_jplayer_isLooping(JNIEnv *env, jobject thiz)
         jniThrowException(env, "java/lang/IllegalStateException", NULL);
         return false;
     }
-	return FALSE;
+	return false;
     //return mp->isLooping();
 }
 
