@@ -82,5 +82,64 @@ status_t Player::initCheck()
     return NO_ERROR;
 }
 
+status_t Player::setDataSource(const char*)
+{
+	return NO_ERROR;
+}
+
+status_t Player::setDataSource(int, int64_t, int64_t)
+{
+	return NO_ERROR;
+}
+
+status_t Player::prepare()
+{
+	return NO_ERROR;
+}
+
+status_t Player::prepareAsync()
+{
+	return NO_ERROR;
+}
+
+status_t Player::stop()
+{
+	return NO_ERROR;
+}
+
+status_t Player::pause()
+{
+	return NO_ERROR;
+}
+
+bool Player::isPlaying()
+{
+	return FALSE;
+}
+
+status_t Player::seekTo(int)
+{
+	return NO_ERROR;
+}
+
+status_t Player::getCurrentPosition(int*)
+{
+	return NO_ERROR;
+}
+
+status_t Player::getDuration(int*)
+{
+	return NO_ERROR;
+}
+
+status_t Player::reset()
+{
+	return NO_ERROR;
+}
+
+status_t Player::setLooping(int)
+{
+	return NO_ERROR;
+}
 
 }
