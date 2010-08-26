@@ -19,6 +19,7 @@ using android::Surface;
 using android::sp;
 using android::AndroidRuntime;
 using androidzoo::Player;
+using android::status_t;
 
 struct fields_t {
     jfieldID    context;
