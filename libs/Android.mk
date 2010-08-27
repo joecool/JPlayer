@@ -2,6 +2,8 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_MODULE_TAGS := eng user development
+
 LOCAL_MODULE    := libjplayer_jni
 LOCAL_SRC_FILES := source/cc_co_androidzoo_jplayer_Player.cpp \
 		source/player.cpp
